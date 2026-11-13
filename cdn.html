@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .box {
+            width: 400px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 20px;
+            cursor: pointer;
+            display: inline-block;
+            padding: 100px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello Vue</h1>
+
+    <div id="app">
+    <!--Attribute Binding-->
+    <a v:bind:href="url">Best Website</a>
+        <div v-if="showBooks">
+            <ul>
+                <li v-for="item in books"> 
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.author }}</p>
+                </li>
+            </ul>
+        </div>
+
+        <button @click="toggleshowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+        </button>
+    </div>
+
+    <script src=cdn.js></script>
+</body>
+</html>
